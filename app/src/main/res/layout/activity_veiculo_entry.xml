@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/txtNome"
+        android:enabled="true"
+        android:editable="true"
+        android:layout_alignBottom="@+id/labelNome"
+        android:layout_toRightOf="@+id/btConc"
+        android:layout_toEndOf="@+id/btConc" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/txtCPF"
+        android:layout_below="@+id/txtNome"
+        android:layout_alignStart="@+id/txtNome" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtEnd"
+        android:layout_below="@+id/txtCPF"
+        android:layout_alignStart="@+id/txtCPF"
+        android:layout_alignEnd="@+id/txtCPF" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtMarca"
+        android:layout_below="@+id/txtEnd"
+        android:layout_alignStart="@+id/txtEnd"
+        android:layout_alignEnd="@+id/txtCPF" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtModelo"
+        android:layout_below="@+id/txtMarca"
+        android:layout_alignStart="@+id/txtMarca"
+        android:layout_alignEnd="@+id/txtCPF" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtPlaca"
+        android:layout_below="@+id/txtModelo"
+        android:layout_alignStart="@+id/txtModelo"
+        android:layout_alignEnd="@+id/txtCPF" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Nome:"
+        android:id="@+id/labelNome"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="28dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="CPF:"
+        android:id="@+id/labelCPF"
+        android:layout_above="@+id/txtEnd"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Endereco:"
+        android:id="@+id/labelEnd"
+        android:layout_above="@+id/txtMarca"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Marca:"
+        android:id="@+id/labelMarca"
+        android:layout_above="@+id/txtModelo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Modelo:"
+        android:id="@+id/labelModelo"
+        android:layout_above="@+id/txtPlaca"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Placa:"
+        android:id="@+id/labelPlaca"
+        android:layout_alignBottom="@+id/txtPlaca"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salvar"
+        android:id="@+id/btConc"
+        android:width="110dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/labelEnd"
+        android:layout_alignEnd="@+id/labelEnd" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Excluir"
+        android:id="@+id/btExc"
+        android:width="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/btLimpar"
+        android:layout_alignRight="@+id/txtPlaca"
+        android:layout_alignEnd="@+id/txtPlaca" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Limpar"
+        android:id="@+id/btLimpar"
+        android:width="110dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/btConc"
+        android:layout_toEndOf="@+id/btConc" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vistoria"
+        android:id="@+id/swOK"
+        android:checked="false"
+        android:layout_below="@+id/labelPlaca"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:layout_above="@+id/btConc"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/btExc"
+        android:layout_alignEnd="@+id/btExc"
+        android:id="@+id/idObservacoes" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Observações:"
+        android:id="@+id/textView"
+        android:layout_below="@+id/swOK"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>
